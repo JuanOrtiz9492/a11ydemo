@@ -47,6 +47,9 @@
   width: 30vw;
   justify-content: space-between;
 }
+.main-container.dropdown{
+  min-height: 200px;
+}
 
 .modal-backdrop {
   display: none;
@@ -125,3 +128,94 @@ dialog {
   text-decoration: none;
   cursor: pointer;
 }
+.dropdown-container {
+  width: 120px;
+  border: 1px solid white;
+  height: fit-content;
+}
+.dropdown-container .selected-option {
+  border-bottom: 1px solid white;
+  position: relative;
+  user-select: none;
+  cursor: pointer;
+}
+.selected-option .arrow::before {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 3px;
+  right: 10px;
+}
+.option-list{
+  list-style-type: none;
+  display: none;
+  padding: 0;
+  margin: 0;
+}
+.option-list.visible{
+  display: flex;
+  flex-direction: column;
+}
+.option-list li:hover {
+  background-color: rgba(120,120,120,0.8);
+  cursor: pointer;
+}
+select {
+  height: fit-content;
+}
+
+.five-pointed-star {
+  --star-color:rgb(122, 115, 100);
+  font-size:5em;
+  position: relative;
+  display: block;
+  width: 0px;
+  height: 0px;
+  border-right: 0.5em solid transparent;
+  border-bottom: 0.35em solid var(--star-color);
+  border-left: 0.5em solid transparent;
+  transform: rotate(35deg);
+ }
+ .five-pointed-star:before {
+  border-bottom: 0.4em solid var(--star-color);
+  border-left: 0.15em solid transparent;
+  border-right: 0.15em solid transparent;
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -0.22em;
+  left: -0.32em;
+  display: block;
+  content:"";
+  transform: rotate(-35deg);
+  cursor: pointer;
+ }
+ .five-pointed-star:after {
+  position: absolute;
+  display: block;
+  top: 0.03em;
+  left: -0.52em;
+  width: 0;
+  height: 0;
+  border-right: 0.5em solid transparent;
+  border-bottom: 0.35em solid var(--star-color);
+  border-left: 0.5em solid transparent;
+  transform: rotate(-70deg);
+  content:"";
+  cursor: pointer;
+ }
+ .five-pointed-star.active {
+  --star-color:orange;  
+ }
+ .raiting-container {
+  display: flex;
+  flex-direction: row;
+ }
+ .raiting-container .five-pointed-star {
+  margin-left: 0.2em;
+ }

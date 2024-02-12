@@ -9,6 +9,12 @@ const Navbar = ()=> {
                 <li>
                     <Link to="/link"> link Demo</Link>
                 </li>
+                <li>
+                    <Link to="/dropdown"> dropdown Demo</Link>
+                </li>
+                <li>
+                    <Link to="/raiting"> raiting Demo</Link>
+                </li>
             </ul>
         </nav>
     )    

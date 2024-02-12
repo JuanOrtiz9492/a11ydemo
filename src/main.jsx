@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import ButtonDemo from './demos/button/index.jsx'
 import LinkDemo from './demos/links/index.jsx'
+import DropdownDemo from './demos/dropdown/index.jsx'
+import Raiting from './demos/raiting/index.jsx'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
@@ -18,6 +20,14 @@ const router = createBrowserRouter([
       {
         path:'/link',
         element: <LinkDemo />
+      },
+      {
+        path:'/dropdown',
+        element: <DropdownDemo />
+      },
+      {
+        path:'/raiting',
+        element: <Raiting />
       }
     ]
   }
