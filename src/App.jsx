@@ -1,14 +1,17 @@
 import './App.css'
-
-import ButtonDemo from './demos/button'
+import Navbar from './components/nav'
+import { Outlet } from 'react-router-dom'
 
 function App() {
 
   return (
-    <>
-    <h1>Demos</h1>
-      <ButtonDemo/>
-    </>
+    <div className="app-container">
+      <Navbar />
+      <div className='demos-container'>
+        <h1>A11y DEMO</h1>
+        <Outlet />
+      </div>
+    </div>
   )
 }
 
